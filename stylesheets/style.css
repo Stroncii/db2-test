@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2|Roboto");
+/* line 3, ../sass/style.scss */
+body {
+  display: flex;
+  margin: 0 auto;
+  background: #F9FAFC;
+  font-family: Roboto;
+}
+
+/* line 10, ../sass/style.scss */
+header {
+  height: 60.94px;
+  background-color: #FFF;
+  width: calc(100vw - 80px);
+  position: fixed;
+  top: 0px;
+  left: 80px;
+  border-bottom: 1px solid #DAE4F2;
+  display: flex;
+  justify-items: baseline;
+  justify-content: space-between;
+  color: #252F48;
+}
+/* line 23, ../sass/style.scss */
+header > div {
+  align-content: center;
+  padding: 25px;
+}
+/* line 29, ../sass/style.scss */
+header .path {
+  font-size: 13px;
+  line-height: 15px;
+}
+/* line 33, ../sass/style.scss */
+header .path span, header .path i {
+  padding-right: 10px;
+}
+/* line 37, ../sass/style.scss */
+header .path i {
+  color: #0AD69C;
+}
+/* line 42, ../sass/style.scss */
+header .account-owner {
+  display: flex;
+  align-items: center;
+}
+/* line 46, ../sass/style.scss */
+header .account-owner span {
+  margin: 0 5px;
+  letter-spacing: .28px;
+}
+/* line 51, ../sass/style.scss */
+header .account-owner img {
+  width: 22px;
+  height: 22px;
+}
+/* line 56, ../sass/style.scss */
+header .account-owner i {
+  color: #01134E;
+}
+
+/* line 62, ../sass/style.scss */
+nav {
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  background-color: #01134E;
+  left: 0px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+/* line 72, ../sass/style.scss */
+nav ul {
+  list-style-type: none;
+  height: 300px;
+  margin-top: 50px;
+  padding: 0px;
+}
+/* line 79, ../sass/style.scss */
+nav ul li {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+/* line 87, ../sass/style.scss */
+nav ul li i {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 92, ../sass/style.scss */
+nav ul li.active {
+  border-left: 4px solid #0AD69C;
+}
+/* line 95, ../sass/style.scss */
+nav ul li.active i {
+  color: #FFF;
+}
+/* line 100, ../sass/style.scss */
+nav ul li .task {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: #2A74DB;
+  color: #fff;
+  top: 8px;
+  right: 20px;
+  position: absolute;
+  font: bold 9px/18px Roboto;
+  border-radius: 15px;
+}
+/* line 115, ../sass/style.scss */
+nav img {
+  width: 35px;
+  height: 35px;
+  margin: 18px calc((80px - 35px)/2);
+}
+
+/* line 122, ../sass/style.scss */
+.messenger {
+  width: 850px;
+  height: 550px;
+  margin: calc((100vh - 550px)/2) auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 30px rgba(153, 163, 174, 0.06);
+  display: flex;
+}
+/* line 130, ../sass/style.scss */
+.messenger > div {
+  height: 100%;
+}
+/* line 134, ../sass/style.scss */
+.messenger .repliers {
+  background: #F7F9FC;
+  border-right: #EDF0F4;
+  flex-direction: column;
+  width: 300px;
+}
+/* line 140, ../sass/style.scss */
+.messenger .repliers .replier {
+  display: flex;
+  position: relative;
+  height: 92px;
+  align-items: center;
+  justify-content: space-around;
+}
+/* line 147, ../sass/style.scss */
+.messenger .repliers .replier img {
+  width: 50px;
+  height: 50px;
+}
+/* line 153, ../sass/style.scss */
+.messenger .repliers .replier.active-replier {
+  background-color: #fff;
+  box-shadow: 0 -5px 5px rgba(224, 224, 224, 0.15), 0 5px 5px rgba(190, 200, 212, 0.2);
+}
+/* line 158, ../sass/style.scss */
+.messenger .repliers .replier .replier-info {
+  width: 185px;
+}
+/* line 161, ../sass/style.scss */
+.messenger .repliers .replier .replier-info p {
+  margin-top: 3px;
+}
+/* line 164, ../sass/style.scss */
+.messenger .repliers .replier .replier-info i {
+  color: #9BA0AD;
+  font-size: 10px;
+}
+/* line 168, ../sass/style.scss */
+.messenger .repliers .replier .replier-info .replier-name {
+  font-family: 'Exo 2';
+  color: #01134E;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: .57px;
+  display: inline;
+  margin-right: 15px;
+}
+/* line 179, ../sass/style.scss */
+.messenger .repliers .replier .replier-info .replier-name.user-online:after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: green;
+  content: '';
+  position: absolute;
+  color: #0AD69C;
+  margin-left: 5px;
+}
+/* line 191, ../sass/style.scss */
+.messenger .repliers .replier .replier-info .message-preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #252F48;
+  opacity: .43;
+}
+/* line 204, ../sass/style.scss */
+.messenger .repliers .replier .time {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .43px;
+  color: #9BA0AD;
+}
+/* line 216, ../sass/style.scss */
+.messenger .corresponding {
+  width: calc(850px - 180px);
+}
