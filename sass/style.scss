@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2|Roboto');
 
+p {
+  padding-left: 0;
+}
+
+%text-gray {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #252F48;
+}
+
+%full-size {
+  width: 100%;
+  height: 100%;
+}
+
+%placeholder {
+  &::placeholder {
+    @extend %text-gray;
+    letter-spacing: .5px;
+    opacity: .48;
+  }
+  &:placeholder-shown {
+    padding-left: 50px;
+  }
+}
+
+%time {
+  position: absolute;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .43px;
+  color: #9BA0AD;
+}
+
+%input {
+    @extend %full-size;
+    border: none;
+    box-sizing: border-box;
+    @extend %placeholder;
+}
+
 body {
   display: flex;
   margin: 0 auto;
@@ -189,31 +231,170 @@ nav {
           }
         }
         .message-preview {
+          @extend %text-gray;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          font-style: normal;
-          font-size: 14px;
-          line-height: 18px;
-          color: #252F48;
           opacity: .43;
         }
       }
 
 
       .time {
-        position: absolute;
+        @extend %time;
         top: 5px;
         right: 5px;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: .43px;
-        color: #9BA0AD;
       }
     }
   }
 
+
+
   .corresponding {
     width: calc(850px - 180px);
+    position: relative;
+    .search {
+      border-bottom: 1px solid #F5F6F9;
+
+      form {
+        @extend %full-size;
+        position: relative;
+
+        i {
+          position: absolute;
+          top: 20px;
+          left: 10px;
+        }
+
+        input {
+          @extend %input;
+          border-bottom: 1px solid #F5F6F9;
+        }
+      }
+    }
+    .send-message {
+      border-top: 1px solid #F5F6F9;
+      position: absolute;
+      bottom: 0px;
+      box-shadow: 0 0 20px rgba(153, 163, 174, 0.1465);
+      form {
+        position: relative;
+        @extend %full-size;
+        input {
+          @extend %input;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          &.clip {
+            top: 16px;
+            right: 70px;
+          }
+
+          &.smile {
+            top: 16px;
+            right: 100px
+          }
+
+          i{
+            font-size: 20px;
+          }
+        }
+        .paper-plane {
+
+          width: 36px;
+          height: 36px;
+          background-color: #fff;
+          top: 7px;
+          right: 15px;
+          border-radius: 7px;
+          box-shadow: 0 0 15px rgba(153, 163, 174, 0.2593);
+          text-align: center;
+
+          i {
+            color: #0AD69C;
+          }
+        }
+      }
+    }
+
+    .search, .send-message {
+      height: 50px;
+      width: 100%;
+
+      i {
+        color: #DADADA;
+        font-size: 15px;
+      }
+    }
+
+
+    .messages {
+
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+
+      .corresponding-time {
+        font: normal 14px/18px 'Exo 2';
+        letter-spacing: .5px;
+        color: #CACED9;
+        margin: 0 30px;
+        text-align: center;
+      }
+      .received-message {
+        background: transparent;
+        width: 350px;
+        position: relative;
+        img {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          bottom: -5px;
+          left: 5px;
+          z-index: 1;
+        }
+
+        p {
+          margin-left: 50px;
+          color: #222428;
+          display: inline-block;
+        }
+
+        .message {
+          margin-left: 50px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .own-message {
+        align-self: flex-end;
+      }
+
+      .message, .own-message {
+        width: 300px;
+        background-color: #F7F9FC;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 10px;
+        position: relative;
+
+        p {
+          width: 230px;
+          padding: 5px;
+          font-size: 14px;
+          line-height: 20px;
+          margin-left: 10px;
+        }
+        .message-time {
+            @extend %time;
+            bottom: 10px;
+            right: 5px;
+        }
+      }
+    }
   }
+
 }

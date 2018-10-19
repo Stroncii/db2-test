@@ -1,5 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2|Roboto");
 /* line 3, ../sass/style.scss */
+p {
+  padding-left: 0;
+}
+
+/* line 7, ../sass/style.scss */
+.messenger .corresponding .search form input::placeholder, .messenger .corresponding .send-message form input::placeholder, .messenger .repliers .replier .replier-info .message-preview {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #252F48;
+}
+
+/* line 14, ../sass/style.scss */
+.messenger .corresponding .search form input, .messenger .corresponding .send-message form input, .messenger .corresponding .search form, .messenger .corresponding .send-message form {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 20, ../sass/style.scss */
+.messenger .corresponding .search form input::placeholder, .messenger .corresponding .send-message form input::placeholder {
+  letter-spacing: .5px;
+  opacity: .48;
+}
+/* line 25, ../sass/style.scss */
+.messenger .corresponding .search form input:placeholder-shown, .messenger .corresponding .send-message form input:placeholder-shown {
+  padding-left: 50px;
+}
+
+/* line 30, ../sass/style.scss */
+.messenger .repliers .replier .time, .messenger .corresponding .messages .message .message-time, .messenger .corresponding .messages .own-message .message-time {
+  position: absolute;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .43px;
+  color: #9BA0AD;
+}
+
+/* line 38, ../sass/style.scss */
+.messenger .corresponding .search form input, .messenger .corresponding .send-message form input {
+  border: none;
+  box-sizing: border-box;
+}
+
+/* line 45, ../sass/style.scss */
 body {
   display: flex;
   margin: 0 auto;
@@ -7,7 +51,7 @@ body {
   font-family: Roboto;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 header {
   height: 60.94px;
   background-color: #FFF;
@@ -21,45 +65,45 @@ header {
   justify-content: space-between;
   color: #252F48;
 }
-/* line 23, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 header > div {
   align-content: center;
   padding: 25px;
 }
-/* line 29, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 header .path {
   font-size: 13px;
   line-height: 15px;
 }
-/* line 33, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 header .path span, header .path i {
   padding-right: 10px;
 }
-/* line 37, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 header .path i {
   color: #0AD69C;
 }
-/* line 42, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 header .account-owner {
   display: flex;
   align-items: center;
 }
-/* line 46, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 header .account-owner span {
   margin: 0 5px;
   letter-spacing: .28px;
 }
-/* line 51, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 header .account-owner img {
   width: 22px;
   height: 22px;
 }
-/* line 56, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 header .account-owner i {
   color: #01134E;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 nav {
   width: 80px;
   height: 100vh;
@@ -70,14 +114,14 @@ nav {
   align-content: center;
   justify-content: center;
 }
-/* line 72, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 nav ul {
   list-style-type: none;
   height: 300px;
   margin-top: 50px;
   padding: 0px;
 }
-/* line 79, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 nav ul li {
   height: 50px;
   width: 100%;
@@ -86,20 +130,20 @@ nav ul li {
   box-sizing: border-box;
   position: relative;
 }
-/* line 87, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 nav ul li i {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 92, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 nav ul li.active {
   border-left: 4px solid #0AD69C;
 }
-/* line 95, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 nav ul li.active i {
   color: #FFF;
 }
-/* line 100, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 nav ul li .task {
   display: inline-block;
   width: 19px;
@@ -112,14 +156,14 @@ nav ul li .task {
   font: bold 9px/18px Roboto;
   border-radius: 15px;
 }
-/* line 115, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 nav img {
   width: 35px;
   height: 35px;
   margin: 18px calc((80px - 35px)/2);
 }
 
-/* line 122, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .messenger {
   width: 850px;
   height: 550px;
@@ -128,18 +172,18 @@ nav img {
   box-shadow: 0 0 30px rgba(153, 163, 174, 0.06);
   display: flex;
 }
-/* line 130, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .messenger > div {
   height: 100%;
 }
-/* line 134, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .messenger .repliers {
   background: #F7F9FC;
   border-right: #EDF0F4;
   flex-direction: column;
   width: 300px;
 }
-/* line 140, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .messenger .repliers .replier {
   display: flex;
   position: relative;
@@ -147,30 +191,30 @@ nav img {
   align-items: center;
   justify-content: space-around;
 }
-/* line 147, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .messenger .repliers .replier img {
   width: 50px;
   height: 50px;
 }
-/* line 153, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .messenger .repliers .replier.active-replier {
   background-color: #fff;
   box-shadow: 0 -5px 5px rgba(224, 224, 224, 0.15), 0 5px 5px rgba(190, 200, 212, 0.2);
 }
-/* line 158, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .messenger .repliers .replier .replier-info {
   width: 185px;
 }
-/* line 161, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .messenger .repliers .replier .replier-info p {
   margin-top: 3px;
 }
-/* line 164, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .messenger .repliers .replier .replier-info i {
   color: #9BA0AD;
   font-size: 10px;
 }
-/* line 168, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 .messenger .repliers .replier .replier-info .replier-name {
   font-family: 'Exo 2';
   color: #01134E;
@@ -180,7 +224,7 @@ nav img {
   display: inline;
   margin-right: 15px;
 }
-/* line 179, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .messenger .repliers .replier .replier-info .replier-name.user-online:after {
   width: 6px;
   height: 6px;
@@ -191,28 +235,161 @@ nav img {
   color: #0AD69C;
   margin-left: 5px;
 }
-/* line 191, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .messenger .repliers .replier .replier-info .message-preview {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: #252F48;
   opacity: .43;
 }
-/* line 204, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .messenger .repliers .replier .time {
-  position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: .43px;
-  color: #9BA0AD;
 }
-/* line 216, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .messenger .corresponding {
   width: calc(850px - 180px);
+  position: relative;
+}
+/* line 256, ../sass/style.scss */
+.messenger .corresponding .search {
+  border-bottom: 1px solid #F5F6F9;
+}
+/* line 259, ../sass/style.scss */
+.messenger .corresponding .search form {
+  position: relative;
+}
+/* line 263, ../sass/style.scss */
+.messenger .corresponding .search form i {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+/* line 269, ../sass/style.scss */
+.messenger .corresponding .search form input {
+  border-bottom: 1px solid #F5F6F9;
+}
+/* line 275, ../sass/style.scss */
+.messenger .corresponding .send-message {
+  border-top: 1px solid #F5F6F9;
+  position: absolute;
+  bottom: 0px;
+  box-shadow: 0 0 20px rgba(153, 163, 174, 0.1465);
+}
+/* line 280, ../sass/style.scss */
+.messenger .corresponding .send-message form {
+  position: relative;
+}
+/* line 286, ../sass/style.scss */
+.messenger .corresponding .send-message form a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+/* line 291, ../sass/style.scss */
+.messenger .corresponding .send-message form a.clip {
+  top: 16px;
+  right: 70px;
+}
+/* line 296, ../sass/style.scss */
+.messenger .corresponding .send-message form a.smile {
+  top: 16px;
+  right: 100px;
+}
+/* line 301, ../sass/style.scss */
+.messenger .corresponding .send-message form a i {
+  font-size: 20px;
+}
+/* line 305, ../sass/style.scss */
+.messenger .corresponding .send-message form .paper-plane {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  top: 7px;
+  right: 15px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(153, 163, 174, 0.2593);
+  text-align: center;
+}
+/* line 316, ../sass/style.scss */
+.messenger .corresponding .send-message form .paper-plane i {
+  color: #0AD69C;
+}
+/* line 323, ../sass/style.scss */
+.messenger .corresponding .search, .messenger .corresponding .send-message {
+  height: 50px;
+  width: 100%;
+}
+/* line 327, ../sass/style.scss */
+.messenger .corresponding .search i, .messenger .corresponding .send-message i {
+  color: #DADADA;
+  font-size: 15px;
+}
+/* line 334, ../sass/style.scss */
+.messenger .corresponding .messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+/* line 340, ../sass/style.scss */
+.messenger .corresponding .messages .corresponding-time {
+  font: normal 14px/18px 'Exo 2';
+  letter-spacing: .5px;
+  color: #CACED9;
+  margin: 0 30px;
+  text-align: center;
+}
+/* line 347, ../sass/style.scss */
+.messenger .corresponding .messages .received-message {
+  background: transparent;
+  width: 350px;
+  position: relative;
+}
+/* line 351, ../sass/style.scss */
+.messenger .corresponding .messages .received-message img {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  z-index: 1;
+}
+/* line 360, ../sass/style.scss */
+.messenger .corresponding .messages .received-message p {
+  margin-left: 50px;
+  color: #222428;
+  display: inline-block;
+}
+/* line 366, ../sass/style.scss */
+.messenger .corresponding .messages .received-message .message {
+  margin-left: 50px;
+  margin-bottom: 15px;
+}
+/* line 372, ../sass/style.scss */
+.messenger .corresponding .messages .own-message {
+  align-self: flex-end;
+}
+/* line 376, ../sass/style.scss */
+.messenger .corresponding .messages .message, .messenger .corresponding .messages .own-message {
+  width: 300px;
+  background-color: #F7F9FC;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px;
+  position: relative;
+}
+/* line 384, ../sass/style.scss */
+.messenger .corresponding .messages .message p, .messenger .corresponding .messages .own-message p {
+  width: 230px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+/* line 391, ../sass/style.scss */
+.messenger .corresponding .messages .message .message-time, .messenger .corresponding .messages .own-message .message-time {
+  bottom: 10px;
+  right: 5px;
 }

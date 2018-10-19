@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2|Roboto");
+p {
+  padding-left: 0; }
+
+.messenger .corresponding .search form input::placeholder, .messenger .corresponding .send-message form input::placeholder, .messenger .repliers .replier .replier-info .message-preview {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #252F48; }
+
+.messenger .corresponding .search form input, .messenger .corresponding .send-message form input, .messenger .corresponding .search form, .messenger .corresponding .send-message form {
+  width: 100%;
+  height: 100%; }
+
+.messenger .corresponding .search form input::placeholder, .messenger .corresponding .send-message form input::placeholder {
+  letter-spacing: .5px;
+  opacity: .48; }
+.messenger .corresponding .search form input:placeholder-shown, .messenger .corresponding .send-message form input:placeholder-shown {
+  padding-left: 50px; }
+
+.messenger .repliers .replier .time, .messenger .corresponding .messages .message .message-time, .messenger .corresponding .messages .own-message .message-time {
+  position: absolute;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .43px;
+  color: #9BA0AD; }
+
+.messenger .corresponding .search form input, .messenger .corresponding .send-message form input {
+  border: none;
+  box-sizing: border-box; }
+
 body {
   display: flex;
   margin: 0 auto;
@@ -137,20 +167,105 @@ nav {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          font-style: normal;
-          font-size: 14px;
-          line-height: 18px;
-          color: #252F48;
           opacity: .43; }
       .messenger .repliers .replier .time {
-        position: absolute;
         top: 5px;
-        right: 5px;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: .43px;
-        color: #9BA0AD; }
+        right: 5px; }
   .messenger .corresponding {
-    width: calc(850px - 180px); }
+    width: calc(850px - 180px);
+    position: relative; }
+    .messenger .corresponding .search {
+      border-bottom: 1px solid #F5F6F9; }
+      .messenger .corresponding .search form {
+        position: relative; }
+        .messenger .corresponding .search form i {
+          position: absolute;
+          top: 20px;
+          left: 10px; }
+        .messenger .corresponding .search form input {
+          border-bottom: 1px solid #F5F6F9; }
+    .messenger .corresponding .send-message {
+      border-top: 1px solid #F5F6F9;
+      position: absolute;
+      bottom: 0px;
+      box-shadow: 0 0 20px rgba(153, 163, 174, 0.1465); }
+      .messenger .corresponding .send-message form {
+        position: relative; }
+        .messenger .corresponding .send-message form a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute; }
+          .messenger .corresponding .send-message form a.clip {
+            top: 16px;
+            right: 70px; }
+          .messenger .corresponding .send-message form a.smile {
+            top: 16px;
+            right: 100px; }
+          .messenger .corresponding .send-message form a i {
+            font-size: 20px; }
+        .messenger .corresponding .send-message form .paper-plane {
+          width: 36px;
+          height: 36px;
+          background-color: #fff;
+          top: 7px;
+          right: 15px;
+          border-radius: 7px;
+          box-shadow: 0 0 15px rgba(153, 163, 174, 0.2593);
+          text-align: center; }
+          .messenger .corresponding .send-message form .paper-plane i {
+            color: #0AD69C; }
+    .messenger .corresponding .search, .messenger .corresponding .send-message {
+      height: 50px;
+      width: 100%; }
+      .messenger .corresponding .search i, .messenger .corresponding .send-message i {
+        color: #DADADA;
+        font-size: 15px; }
+    .messenger .corresponding .messages {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll; }
+      .messenger .corresponding .messages .corresponding-time {
+        font: normal 14px/18px 'Exo 2';
+        letter-spacing: .5px;
+        color: #CACED9;
+        margin: 0 30px;
+        text-align: center; }
+      .messenger .corresponding .messages .received-message {
+        background: transparent;
+        width: 350px;
+        position: relative; }
+        .messenger .corresponding .messages .received-message img {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          bottom: -5px;
+          left: 5px;
+          z-index: 1; }
+        .messenger .corresponding .messages .received-message p {
+          margin-left: 50px;
+          color: #222428;
+          display: inline-block; }
+        .messenger .corresponding .messages .received-message .message {
+          margin-left: 50px;
+          margin-bottom: 15px; }
+      .messenger .corresponding .messages .own-message {
+        align-self: flex-end; }
+      .messenger .corresponding .messages .message, .messenger .corresponding .messages .own-message {
+        width: 300px;
+        background-color: #F7F9FC;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 10px;
+        position: relative; }
+        .messenger .corresponding .messages .message p, .messenger .corresponding .messages .own-message p {
+          width: 230px;
+          padding: 5px;
+          font-size: 14px;
+          line-height: 20px;
+          margin-left: 10px; }
+        .messenger .corresponding .messages .message .message-time, .messenger .corresponding .messages .own-message .message-time {
+          bottom: 10px;
+          right: 5px; }
 
 /*# sourceMappingURL=style.css.map */
