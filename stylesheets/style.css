@@ -332,8 +332,9 @@ nav img {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  height: calc(100% - 100px);
 }
-/* line 340, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 .messenger .corresponding .messages .corresponding-time {
   font: normal 14px/18px 'Exo 2';
   letter-spacing: .5px;
@@ -341,13 +342,13 @@ nav img {
   margin: 0 30px;
   text-align: center;
 }
-/* line 347, ../sass/style.scss */
+/* line 348, ../sass/style.scss */
 .messenger .corresponding .messages .received-message {
   background: transparent;
   width: 350px;
   position: relative;
 }
-/* line 351, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .messenger .corresponding .messages .received-message img {
   width: 36px;
   height: 36px;
@@ -356,22 +357,22 @@ nav img {
   left: 5px;
   z-index: 1;
 }
-/* line 360, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .messenger .corresponding .messages .received-message p {
   margin-left: 50px;
   color: #222428;
   display: inline-block;
 }
-/* line 366, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .messenger .corresponding .messages .received-message .message {
   margin-left: 50px;
   margin-bottom: 15px;
 }
-/* line 372, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 .messenger .corresponding .messages .own-message {
   align-self: flex-end;
 }
-/* line 376, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .messenger .corresponding .messages .message, .messenger .corresponding .messages .own-message {
   width: 300px;
   background-color: #F7F9FC;
@@ -380,7 +381,7 @@ nav img {
   margin: 10px;
   position: relative;
 }
-/* line 384, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .messenger .corresponding .messages .message p, .messenger .corresponding .messages .own-message p {
   width: 230px;
   padding: 5px;
@@ -388,7 +389,7 @@ nav img {
   line-height: 20px;
   margin-left: 10px;
 }
-/* line 391, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 .messenger .corresponding .messages .message .message-time, .messenger .corresponding .messages .own-message .message-time {
   bottom: 10px;
   right: 5px;

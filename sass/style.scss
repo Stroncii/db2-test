@@ -336,6 +336,7 @@ nav {
       display: flex;
       flex-direction: column;
       overflow-y: scroll;
+      height: calc(100% - 100px);
 
       .corresponding-time {
         font: normal 14px/18px 'Exo 2';

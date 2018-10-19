@@ -224,7 +224,8 @@ nav {
     .messenger .corresponding .messages {
       display: flex;
       flex-direction: column;
-      overflow-y: scroll; }
+      overflow-y: scroll;
+      height: calc(100% - 100px); }
       .messenger .corresponding .messages .corresponding-time {
         font: normal 14px/18px 'Exo 2';
         letter-spacing: .5px;
